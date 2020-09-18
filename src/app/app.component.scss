@@ -7,27 +7,55 @@ header {
 	width: 100%;
 	z-index: 10;
 
+	.container {
+		display: flex;
+		height: 100%;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: var(--maxWidth);
+		width: 100%;
+	}
+
 	.menu {
 		align-items: center;
 		display: flex;
 		height: inherit;
-		justify-content: space-between;
-		margin: 0 auto;
-		max-width: var(--maxWidth);
+	}
 
-		a {
+	.profile {
+		display: flex;
+
+		.user {
 			align-items: center;
-			background-color: transparent;
-			color: black;
 			display: flex;
-			height: 100%;
-			padding: 0 20px;
-			text-decoration: none;
-			text-transform: capitalize;
 
-			&:hover {
-				background-color: rgba(white, 0.3);
+			span {
+				font-weight: 600;
+				margin-right: 10px;
 			}
+
+			img {
+				border: 3px solid orange;
+				border-radius: 50%;
+				height: 50px;
+				object-fit: cover;
+				width: 50px;
+			}
+		}
+	}
+
+	a {
+		align-items: center;
+		background-color: transparent;
+		color: black;
+		display: flex;
+		height: 100%;
+		padding: 0 20px;
+		text-decoration: none;
+		text-transform: capitalize;
+
+		&:hover {
+			background-color: rgba(white, 0.3);
 		}
 	}
 }

@@ -1,5 +1,6 @@
 import {CommonModule} from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
+import {MatButtonModule} from '@angular/material/button';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -23,6 +24,7 @@ import {PageModule} from './views/page/page.module';
     PageModule,
     CommonModule,
     LoginModule,
+    MatButtonModule,
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

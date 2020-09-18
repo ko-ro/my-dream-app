@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {LoginService} from '../../services/login.service';
 
 @Component({
     selector: 'app-login',
@@ -16,6 +17,7 @@ export class LoginComponent implements OnInit {
     constructor(
         private formBuilder: FormBuilder,
         private router: Router,
+        private loginService: LoginService,
     ) { }
 
     ngOnInit(): void {
@@ -23,7 +25,12 @@ export class LoginComponent implements OnInit {
 
     onSubmit(): void {
         if (this.loginForm.controls.login.value === 'doe@example.com' && this.loginForm.controls.password.value === 'qwerty') {
-            this.router.navigateByUrl('/catalog');
+            const user = {
+                name: 'John Doe',
+                access: 'admin',
+                icon: 'https://www.kinonews.ru/insimgs/2019/newsimg/newsimg87089.jpg'
+            };
+            this.loginService.setItem('user', JSON.stringify(user));
         }
     }
 }
