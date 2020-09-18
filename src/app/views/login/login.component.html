@@ -1,0 +1,11 @@
+<form (submit)="onSubmit()" [formGroup]="loginForm">
+	<mat-form-field>
+		<mat-label>Login</mat-label>
+		<input matInput type="text" formControlName="login" autocomplete="off">
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Password</mat-label>
+		<input matInput type="password" formControlName="password" autocomplete="off">
+	</mat-form-field>
+	<button mat-stroked-button color="primary">Login</button>
+</form>

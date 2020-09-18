@@ -1,0 +1,34 @@
+header {
+	background-color: lightgrey;
+	height: 60px;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+
+	.menu {
+		align-items: center;
+		display: flex;
+		height: inherit;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: var(--maxWidth);
+
+		a {
+			align-items: center;
+			background-color: transparent;
+			color: black;
+			display: flex;
+			height: 100%;
+			padding: 0 20px;
+			text-decoration: none;
+			text-transform: capitalize;
+
+			&:hover {
+				background-color: rgba(white, 0.3);
+			}
+		}
+	}
+}
+
